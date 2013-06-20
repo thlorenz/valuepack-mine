@@ -11,7 +11,11 @@
     "url": "git://github.com/thlorenz/valuepack-mine.git"
   },
   "homepage": "https://github.com/thlorenz/valuepack-mine",
-  "dependencies": {},
+  "dependencies": {
+    "valuepack-mine-github": "~0.1.1",
+    "valuepack-core": "~0.2.2",
+    "valuepack-mine-npm": "~0.1.3"
+  },
   "devDependencies": {
     "tap": "~0.4.3"
   },
