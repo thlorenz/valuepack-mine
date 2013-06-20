@@ -1,29 +1,31 @@
 {
-    "name" : "valuepack-mine",
-    "version" : "0.0.0",
-    "description" : "Conducts mining data from different sources for valuepack.",
-    "main" : "index.js",
-    "scripts" : {
-        "test" : "tap test/*.js"
-    },
-    "repository" : {
-        "type" : "git",
-        "url" : "git://github.com/thlorenz/valuepack-mine.git"
-    },
-    "homepage" : "https://github.com/thlorenz/valuepack-mine",
-    "dependencies" : {
-    },
-    "devDependencies" : {
-    },
-    "keywords": [] ,
-    "author" : {
-        "name" : "Thorsten Lorenz",
-        "email" : "thlorenz@gmx.de",
-        "url" : "http://thlorenz.com"
-    },
-    "license" : {
-      "type": "MIT",
-      "url": "https://github.com/thlorenz/valuepack-mine/blob/master/LICENSE"
-    },
-    "engine" : { "node" : ">=0.6" }
+  "name": "valuepack-mine",
+  "version": "0.0.0",
+  "description": "Conducts mining data from different sources for valuepack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thlorenz/valuepack-mine.git"
+  },
+  "homepage": "https://github.com/thlorenz/valuepack-mine",
+  "dependencies": {},
+  "devDependencies": {
+    "tap": "~0.4.3"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de",
+    "url": "http://thlorenz.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/thlorenz/valuepack-mine/blob/master/LICENSE"
+  },
+  "engine": {
+    "node": ">=0.6"
+  }
 }
