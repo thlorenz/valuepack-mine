@@ -15,13 +15,15 @@
     "valuepack-mine-github": "~0.1.1",
     "valuepack-mine-npm": "~0.1.3",
     "through": "~2.3.4",
-    "concat-stream": "~1.0.0",
-    "npmatchub": "~0.1.2",
+    "npmatchub": "~0.1.3",
     "level-dump": "~0.4.0",
-    "valuepack-core": "~0.3.2"
+    "valuepack-core": "~0.3.2",
+    "nest-stream": "~0.1.1",
+    "async-through": "~0.2.1"
   },
   "devDependencies": {
-    "tap": "~0.4.3"
+    "tap": "~0.4.3",
+    "tap-stream": "~0.1.0"
   },
   "keywords": [],
   "author": {
