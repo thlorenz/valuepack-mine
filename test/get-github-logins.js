@@ -7,9 +7,10 @@ var test      =  require('tap').test
   , sublevel  =  require('level-sublevel')
   , dump      =  require('level-dump')
   , getLogins =  require('../lib/get-github-logins')
-  , npm       =  require('valuepack-core/mine/namespaces').npm;
+  , npm       =  require('valuepack-core/mine/namespaces').npm
+  , sublevels = require('valuepack-core/mine/sublevels');
 
-function toPut (o) {
+function toPut (o, valEnc) {
   return xtend(o, { type: 'put' }); 
 }
 
@@ -34,12 +35,15 @@ function setup (cb) {
     , packagesBatch = getPackagesBatch()
 
   var db = sublevel(level({ mem: true })(null, { valueEncoding: 'json' }))
-  var npmPackages =  db.sublevel(npm.packages, { valueEncoding: 'json' })
-    , npmUsers    =  db.sublevel(npm.users, { valueEncoding: 'json' })
-    
+
     // owner values are utf8 encoded, but since we are reading this in json format, we need to adjust while
     // entering data, otherwise all values are surrounded by ""s
-    , byOwner     =  db.sublevel(npm.byOwner, { valueEncoding: 'json' })
+  var byOwner = db.sublevel(npm.byOwner, { valueEncoding: 'json' })
+
+  var subnpm      =  sublevels(db).npm
+    , npmPackages =  subnpm.packages
+    , npmUsers    =  subnpm.users
+
 
   npmPackages.batch(packagesBatch, function (err) {
     if (err) return cb(err);
