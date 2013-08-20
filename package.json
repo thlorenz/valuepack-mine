@@ -19,11 +19,15 @@
     "level-dump": "~0.4.0",
     "valuepack-core": "~0.3.2",
     "nest-stream": "~0.1.1",
-    "async-through": "~0.2.1"
+    "async-through": "~0.2.1",
+    "map-stream": "0.0.2"
   },
   "devDependencies": {
     "tap": "~0.4.3",
-    "tap-stream": "~0.2.0"
+    "tap-stream": "~0.2.0",
+    "level-test": "~1.5.1",
+    "level-sublevel": "~5.0.1",
+    "xtend": "~2.0.6"
   },
   "keywords": [],
   "author": {

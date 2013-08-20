@@ -1,0 +1,52 @@
+[
+  {
+    "key": "dominictarr",
+    "value": {
+      "name": "dominictarr",
+      "email": "dominic.tarr@gmail.com",
+      "github": "dominictarr",
+      "twitter": "dominictarr",
+      "fullname": "Dominic Tarr"
+    }
+  },
+  {
+    "key": "substack",
+    "value": {
+      "name": "substack",
+      "email": "mail@substack.net",
+      "github": "substack",
+      "twitter": "substack",
+      "fullname": "James Halliday"
+    }
+  },
+  {
+    "key": "thlorenz",
+    "value": {
+      "name": "thlorenz",
+      "email": "thlorenz@gmx.de",
+      "github": "thlorenz",
+      "twitter": "thl0",
+      "fullname": "Thorsten Lorenz"
+    }
+  },
+  {
+    "key": "tjholowaychuk",
+    "value": {
+      "name": "tjholowaychuk",
+      "email": "tj@vision-media.ca",
+      "github": null,
+      "twitter": null,
+      "fullname": null
+    }
+  },
+  {
+    "key": "raynos",
+    "value": {
+      "name": "raynos",
+      "email": "raynos2@gmail.com",
+      "github": "Raynos",
+      "twitter": "Raynos2",
+      "fullname": "Jake Verbaten"
+    }
+  }
+]

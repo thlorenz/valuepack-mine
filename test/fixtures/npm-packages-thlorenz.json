@@ -1,0 +1,267 @@
+[{
+  "key": "anchor-markdown-header",
+  "value": {
+    "name": "anchor-markdown-header",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/anchor-markdown-header.git",
+    "versions": {
+      "0.3.2": "latest"
+    },
+    "keywords": [
+      "markdown",
+      "anchor",
+      "link",
+      "regex",
+      "github",
+      "readme"
+    ],
+    "description": "Generates an anchor for a markdown header."
+  }
+},{
+  "key": "ansicolors",
+  "value": {
+    "name": "ansicolors",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/ansicolors.git",
+    "versions": {
+      "0.2.1": "latest"
+    },
+    "keywords": [
+      "ansi",
+      "colors",
+      "highlight",
+      "string"
+    ],
+    "description": "Functions that surround a string with ansicolor codes so it prints in color."
+  }
+},{
+  "key": "ansistyles",
+  "value": {
+    "name": "ansistyles",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/ansistyles.git",
+    "versions": {
+      "0.1.1": "latest"
+    },
+    "keywords": [
+      "ansi",
+      "style",
+      "terminal",
+      "console"
+    ],
+    "description": "Functions that surround a string with ansistyle codes so it prints in style."
+  }
+},{
+  "key": "bconfig",
+  "value": {
+    "name": "bconfig",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/bconfig.git",
+    "versions": {
+      "0.1.3": "latest"
+    },
+    "keywords": [
+      "requirejs",
+      "amd",
+      "browserify",
+      "config",
+      "adapt",
+      "remote",
+      "shim"
+    ],
+    "description": "Structures a requirejs config into shim and remote objects to easier interface with browserify."
+  }
+},{
+  "key": "brace",
+  "value": {
+    "name": "brace",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/brace.git",
+    "versions": {
+      "0.1.3": "latest"
+    },
+    "keywords": [
+      "ace",
+      "editor",
+      "browser",
+      "package",
+      "bundle",
+      "inline",
+      "browserify"
+    ],
+    "description": "browserify compatible version of the ace editor."
+  }
+},{
+  "key": "bromote",
+  "value": {
+    "name": "bromote",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/bromote.git",
+    "versions": {
+      "0.1.2": "latest"
+    },
+    "keywords": [
+      "browserify",
+      "remote",
+      "script",
+      "load",
+      "head",
+      "async",
+      "url"
+    ],
+    "description": "Tool to setup and require remote scripts with browserify."
+  }
+},{
+  "key": "browserify-ftw",
+  "value": {
+    "name": "browserify-ftw",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/browserify-ftw.git",
+    "versions": {
+      "0.4.0": "latest"
+    },
+    "keywords": [
+      "browserify",
+      "refactor",
+      "upgrade",
+      "commonJS",
+      "requireJS"
+    ],
+    "description": "Upgrade your app from requireJS AMD to commonJS module format via an automated refactor step in order to browserify it."
+  }
+},{
+  "key": "proxyquireify",
+  "value": {
+    "name": "proxyquireify",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/proxyquireify.git",
+    "versions": {
+      "0.2.2": "latest"
+    },
+    "keywords": [
+      "require",
+      "dependency",
+      "test",
+      "mock",
+      "stub",
+      "proxyquire",
+      "browser",
+      "browserify",
+      "client"
+    ],
+    "description": "Proxies browserify's require in order to allow overriding dependencies during testing."
+  }
+},{
+  "key": "pygmentsjs",
+  "value": {
+    "name": "pygmentsjs",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/pygmentsjs.git",
+    "versions": {
+      "0.0.0": "latest"
+    },
+    "keywords": [
+      "syntax",
+      "highlight",
+      "pygments"
+    ],
+    "description": "Python server and JavaScript client talking via stdin/stdout to highlight code using the pygments highlighter."
+  }
+},{
+  "key": "readarepo",
+  "value": {
+    "name": "readarepo",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "https://github.com/thlorenz/readarepo.git",
+    "versions": {
+      "0.0.0": "latest"
+    },
+    "keywords": [
+      "github",
+      "source",
+      "code",
+      "offline",
+      "reading",
+      "mobile",
+      "cli",
+      "html5"
+    ],
+    "description": "Convert a git repo into an Html5 app to read offline in any browser anywhere."
+  }
+},{
+  "key": "readarepo-zip",
+  "value": {
+    "name": "readarepo-zip",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/readarepo-zip.git",
+    "versions": {
+      "0.1.1": "latest"
+    },
+    "keywords": [
+      "github",
+      "code",
+      "source",
+      "offline",
+      "reading",
+      "mobile",
+      "cli",
+      "command line"
+    ],
+    "description": "Convert a git repo to zipped up html to read anywhere."
+  }
+},{
+  "key": "readarepo-zip",
+  "value": {
+    "name": "readarepo-zip",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/readarepo-zip.git",
+    "versions": {
+      "0.1.1": "latest"
+    },
+    "keywords": [
+      "github",
+      "code",
+      "source",
+      "offline",
+      "reading",
+      "mobile",
+      "cli",
+      "command line"
+    ],
+    "description": "Convert a git repo to zipped up html to read anywhere."
+  }
+},{
+  "key": "readdirp",
+  "value": {
+    "name": "readdirp",
+    "owner": "thlorenz",
+    "email": "thlorenz@gmx.de",
+    "repoUrl": "git://github.com/thlorenz/readdirp.git",
+    "versions": {
+      "0.3.0": "latest"
+    },
+    "keywords": [
+      "recursive",
+      "fs",
+      "stream",
+      "streams",
+      "readdir",
+      "filesystem",
+      "find",
+      "filter"
+    ],
+    "description": "Recursive version of fs.readdir with streaming api."
+  }
+}]

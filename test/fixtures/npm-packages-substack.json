@@ -1,0 +1,139 @@
+[{
+  "key": "airport",
+  "value": {
+    "name": "airport",
+    "owner": "substack",
+    "email": "mail@substack.net",
+    "repoUrl": "git://github.com/substack/airport.git",
+    "versions": {
+      "0.4.3": "latest"
+    },
+    "keywords": [
+      "upnode",
+      "dnode",
+      "seaport",
+      "port"
+    ],
+    "description": "role-based port management for upnode"
+  }
+},{
+  "key": "ap",
+  "value": {
+    "name": "ap",
+    "owner": "substack",
+    "email": "mail@substack.net",
+    "repoUrl": "http://github.com/substack/node-ap.git",
+    "versions": {
+      "0.2.0": "latest"
+    },
+    "keywords": [
+      "curry",
+      "apply",
+      "ap",
+      "bind",
+      "function",
+      "functional"
+    ],
+    "description": "Currying in javascript. Like .bind() without also setting `this`."
+  }
+},{
+  "key": "archy",
+  "value": {
+    "name": "archy",
+    "owner": "substack",
+    "email": "mail@substack.net",
+    "repoUrl": "git://github.com/substack/node-archy.git",
+    "versions": {
+      "0.0.2": "latest"
+    },
+    "keywords": [
+      "hierarchy",
+      "npm ls",
+      "unicode",
+      "pretty",
+      "print"
+    ],
+    "description": "render nested hierarchies `npm ls` style with unicode pipes"
+  }
+},{
+  "key": "astw",
+  "value": {
+    "name": "astw",
+    "owner": "substack",
+    "email": "mail@substack.net",
+    "repoUrl": "git://github.com/substack/astw.git",
+    "versions": {
+      "0.0.0": "latest"
+    },
+    "keywords": [
+      "ast",
+      "walk",
+      "source",
+      "esprima"
+    ],
+    "description": "walk the ast with references to parent nodes"
+  }
+},{
+  "key": "chainsaw",
+  "value": {
+    "name": "chainsaw",
+    "owner": "substack",
+    "email": "mail@substack.net",
+    "repoUrl": "git://github.com/substack/node-chainsaw.git",
+    "versions": {
+      "0.1.0": "latest"
+    },
+    "keywords": [
+      "chain",
+      "fluent",
+      "interface",
+      "monad",
+      "monadic"
+    ],
+    "description": "Build chainable fluent interfaces the easy way... with a freakin' chainsaw!"
+  }
+},{
+  "key": "char-size",
+  "value": {
+    "name": "char-size",
+    "owner": "substack",
+    "email": "mail@substack.net",
+    "repoUrl": "git://github.com/substack/char-size.git",
+    "versions": {
+      "0.0.0": "latest"
+    },
+    "keywords": [
+      "html",
+      "css",
+      "browser",
+      "browserify",
+      "font",
+      "monospace",
+      "dom",
+      "fixed-width"
+    ],
+    "description": "return the size in pixels of a single character"
+  }
+},{
+  "key": "charm",
+  "value": {
+    "name": "charm",
+    "owner": "substack",
+    "email": "mail@substack.net",
+    "repoUrl": "http://github.com/substack/node-charm.git",
+    "versions": {
+      "0.1.2": "latest"
+    },
+    "keywords": [
+      "terminal",
+      "ansi",
+      "cursor",
+      "color",
+      "console",
+      "control",
+      "escape",
+      "sequence"
+    ],
+    "description": "ansi control sequences for terminal cursor hopping and colors"
+  }
+}]
