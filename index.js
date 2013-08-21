@@ -8,8 +8,8 @@ var runnel = require('runnel')
   , updateByGithub = require('./lib/update-by-github')
   ;
   
-function getLoginsAndApplyFixes (db, cb) {
-  getGithubLogins(db, [ 'raynos', 'thlorenz', 'tjholowaychuk' ], function (err, logins) {
+function getLoginsAndApplyFixes (db, filter, cb) {
+  getGithubLogins(db, function (err, logins) {
     if (err) return cb(err);
     
     updateByGithub(db, logins.byOwner, cb);
@@ -35,7 +35,6 @@ var go = module.exports = function (db, cb) {
   );*/
 
  getLoginsAndApplyFixes(db, cb);
-
 };
 
 
