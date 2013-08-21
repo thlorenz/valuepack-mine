@@ -20,7 +20,9 @@
     "valuepack-core": "~0.3.2",
     "nest-stream": "~0.1.1",
     "async-through": "~0.2.1",
-    "map-stream": "0.0.2"
+    "map-stream": "0.0.2",
+    "runnel": "~0.5.1",
+    "asyncreduce": "~0.1.4"
   },
   "devDependencies": {
     "tap": "~0.4.3",
