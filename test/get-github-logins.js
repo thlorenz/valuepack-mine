@@ -7,7 +7,6 @@ var test      =  require('tap').test
   , sublevel  =  require('level-sublevel')
   , dump      =  require('level-dump')
   , getLogins =  require('../lib/get-github-logins')
-  , npm       =  require('valuepack-core/mine/namespaces').npm
   , sublevels = require('valuepack-core/mine/sublevels');
 
 function toPut (o, valEnc) {
@@ -31,23 +30,20 @@ function setup (cb) {
   // contains byOwner indexes for all batched packages
     , owners = require('./fixtures/byOwner-tj-thlorenz-substack-dominictarr-raynos.json')
     , usersBatch = users.map(toPut)
-    , byOwnerBatch = owners.map(toPut)
+    , byOwnerBatch = owners.map(toPut).map(function (x) { return xtend(x, { valueEncoding: 'utf8' }) })
     , packagesBatch = getPackagesBatch()
 
   var db = sublevel(level({ mem: true })(null, { valueEncoding: 'json' }))
 
-    // owner values are utf8 encoded, but since we are reading this in json format, we need to adjust while
-    // entering data, otherwise all values are surrounded by ""s
-  var byOwner = db.sublevel(npm.byOwner, { valueEncoding: 'json' })
-
   var subnpm      =  sublevels(db).npm
     , npmPackages =  subnpm.packages
     , npmUsers    =  subnpm.users
+    , npmByOwner  =  subnpm.byOwner
 
 
   npmPackages.batch(packagesBatch, function (err) {
     if (err) return cb(err);
-    byOwner.batch(byOwnerBatch, function (err) {
+    npmByOwner.batch(byOwnerBatch, function (err) {
       if (err) return cb(err);
       npmUsers.batch(usersBatch, function (err) {
         if (err) return cb(err);
