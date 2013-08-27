@@ -17,12 +17,13 @@
     "through": "~2.3.4",
     "npmatchub": "~0.1.3",
     "level-dump": "~0.4.0",
-    "valuepack-core": "~0.3.2",
     "nest-stream": "~0.1.1",
     "async-through": "~0.2.1",
     "map-stream": "0.0.2",
     "runnel": "~0.5.1",
-    "asyncreduce": "~0.1.4"
+    "asyncreduce": "~0.1.4",
+    "valuepack-core": "~0.3.5",
+    "concat-stream": "~1.0.1"
   },
   "devDependencies": {
     "tap": "~0.4.3",
