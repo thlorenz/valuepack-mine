@@ -1,21 +1,13 @@
 'use strict';
 
-var runnel = require('runnel') 
-  , log = require('valuepack-core/util/log')
-  , updateNpm = require('valuepack-mine-npm')
-  , updateGithub = require('valuepack-mine-github')
-  , getGithubLogins = require('./lib/get-github-logins')
-  , updateByGithub = require('./lib/update-by-github')
+var log             =  require('valuepack-core/util/log')
+  , updateNpm       =  require('valuepack-mine-npm')
+  , updateGithub    =  require('valuepack-mine-github')
+  , getGithubLogins =  require('./lib/get-github-logins')
+  , updateByGithub  =  require('./lib/update-by-github')
+  , fixRepoUrls     =  require('./lib/fix-repo-urls')
   ;
   
-function getLoginsAndApplyFixes (db, filter, cb) {
-  getGithubLogins(db, function (err, logins) {
-    if (err) return cb(err);
-    
-    updateByGithub(db, logins.byOwner, cb);
-  });
-}
-
 // 1. update npm
 
 // 2. for each user determine possible github logins (not only the one that is given)
@@ -30,11 +22,41 @@ function getLoginsAndApplyFixes (db, filter, cb) {
 // at this point we should have mined all data
 
 var go = module.exports = function (db, cb) {
-  /*runnel(
-      updateNpm
-  );*/
 
- getLoginsAndApplyFixes(db, cb);
+  // TODO: updateNpm needs to allow passing db and also provide script that passes it
+  updateNpm(db, function (err) {
+    if (err) return cb(err);
+    thenGetGithubLogins();
+  });
+
+  function thenGetGithubLogins () {
+    getGithubLogins(db, function (err, logins) {
+      if (err) return cb(err);
+      thenUpdateGithub(logins);
+    });
+  }
+
+  function thenUpdateGithub (logins) {
+    // TODO: updateGithub needs to allow passing db
+    updateGithub(db, logins, function (err) {
+      if (err) return cb(err);
+      thenUpdateByGithub(logins);
+    });
+  }
+
+  function thenUpdateByGithub (logins) {
+    updateByGithub(db, logins.byOwner, function (err) {
+      if (err) return cb(err);
+      thenFixRepoUrls(logins);
+    });
+  }
+
+  function thenFixRepoUrls (logins) {
+
+    // where do I get npm users from? 
+    // what is logins.byOwner and logins.all ?
+  }
+
 };
 
 
