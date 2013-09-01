@@ -6,26 +6,14 @@ var log             =  require('valuepack-core/util/log')
   , getGithubLogins =  require('./lib/get-github-logins')
   , updateByGithub  =  require('./lib/update-by-github')
   , fixRepoUrls     =  require('./lib/fix-repo-urls')
+  , nib             =  require('valuepack-core').nib
+  , tap             =  require('tap-stream')
   ;
   
-// 1. update npm
-
-// 2. for each user determine possible github logins (not only the one that is given)
-//    instead use npmatchub to deduce possible logins
-//    this will give long list of github logins we need to get from github
-  
-// 3. pull down repo and user info for all these users
-
-// 4. fix repo urls by trying to match npm packages to repos we pulled down - don't 
-//    do more (i.e. don't try to ping github -- too slow and unreliable)
-
-// at this point we should have mined all data
-
 var go = module.exports = function (db, opts, cb) {
   log.info('mine', opts);
 
   if (opts.npm) {
-    // TODO: updateNpm needs to allow passing db and also provide script that passes it
     updateNpm(db, function (err) {
       if (err) return cb(err);
       thenGetGithubLogins();
@@ -44,8 +32,7 @@ var go = module.exports = function (db, opts, cb) {
   }
 
   function thenUpdateGithub (logins) {
-    // TODO: updateGithub needs to allow passing db
-    updateGithub(db, logins.byOwner, function (err) {
+    updateGithub(db, logins.all, function (err) {
       if (err) return cb(err);
       thenUpdateByGithub(logins);
     });
@@ -70,19 +57,28 @@ var go = module.exports = function (db, opts, cb) {
 if (!module.parent) {
   log.level = 'silly';
 
+  var dump = require('level-dump');
+  var sublevels = require('valuepack-core/mine/sublevels')
   var leveldb = require('valuepack-core/mine/leveldb')
   var opts = {
       npm           :  false
-    , github        :  false
-//    , npmUserFilter :  [ 'tjholowaychuk', 'thlorenz', 'substack', 'dominictarr', 'Raynos' ]
+    , github        :  true
+   // , npmUserFilter :  [ 'tjholowaychuk', 'thlorenz', 'substack', 'dominictarr', 'Raynos' ]
   };
 
   leveldb.open(function (err, db) {
     if (err) return console.error(err);
-    go(db, opts, function (err) {
+    var subnpm = sublevels(db).npm;
+
+    /*go(db, opts, function (err) {
       if (err) return console.error(err);
       console.log('DONE')  
-    });
+    });*/
+
+  /*subnpm.users
+    .createReadStream({ start: 'thlorenz', end: 'thlorenz' + '\xff', keys: true, values: true })
+    .pipe(tap())
+*/
   })
 }
 
