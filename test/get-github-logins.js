@@ -1,13 +1,20 @@
 'use strict';
 /*jshint asi: true */
 
-var test      =  require('tap').test
-  , xtend     =  require('xtend')
+var debug //=  true;
+var test  =  debug  ? function () {} : require('tap').test
+var test_ =  !debug ? function () {} : require('tap').test
+
+var xtend     =  require('xtend')
   , level     =  require('level-test')
   , sublevel  =  require('level-sublevel')
   , dump      =  require('level-dump')
   , getLogins =  require('../lib/get-github-logins')
   , sublevels = require('valuepack-core/mine/sublevels');
+
+function inspect(obj, depth) {
+  console.error(require('util').inspect(obj, false, depth || 5, true));
+}
 
 function toPut (o, valEnc) {
   return xtend(o, { type: 'put' }); 
@@ -80,7 +87,7 @@ test('\nnon-empty db - non-filtered', function (t) {
 
     if (err) return t.fail(err);
 
-    getLogins(db, function (err, logins) {
+    getLogins(db, function (err, logins) {  
       if (err) return t.fail(err);
 
       t.deepEqual(
